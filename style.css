@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --margin-01: 8px;
+  --margin-h: calc(var(--margin-01) * 0.5);
+  --margin-q: calc(var(--margin-01) * 0.25);
+  --margin-02: calc(var(--margin-01) * 2);
+  --margin-03: calc(var(--margin-01) * 3);
+  --margin-04: calc(var(--margin-01) * 4);
+  --margin-05: calc(var(--margin-01) * 5);
+  --margin-06: calc(var(--margin-01) * 6);
+  --margin-07: calc(var(--margin-01) * 7);
+  --margin-08: calc(var(--margin-01) * 8);
+  --margin-09: calc(var(--margin-01) * 9);
+  --margin-10: calc(var(--margin-01) * 10);
+
+  --bg-01: #f4f4f4;
+  --bg-02: #fff;
+  --fg: #000;
+  --hl: #fdd000;
+  --danger: #f54242;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  background-color: var(--bg-01);
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+#header,
+#footer {
+  background: var(--hl);
+  padding: var(--margin-02);
+  text-align: center;
+}
+
+#footer a {
+  color: var(--fg);
+}
+
+main {
+  flex-grow: 1;
+  margin-top: var(--margin-04);
+  margin-bottom: var(--margin-04);
+  padding-right: var(--margin-02);
+  padding-left: var(--margin-02);
+}
+
+main .wrapper {
+}
+
+button {
+  font-size: 1em;
+  border: 2px solid var(--fg);
+  background: white;
+  padding: var(--margin-01);
+  cursor: pointer;
+  min-width: 50px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--hl);
+}
+
+input {
+  font-size: 1em;
+  border: 2px solid var(--fg);
+  background: white;
+  padding: var(--margin-01);
+}
+
+form {
+  margin-bottom: var(--margin-05);
+  display: flex;
+  flex-flow: row;
+}
+
+form input {
+  flex-grow: 1;
+  border-right: 0;
+  /* margin-right: var(--margin-01); */
+}
+form button {
+  font-size: 1.5em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5em;
+  background: var(--bg-02);
+}
+
+.task-empty {
+  padding: var(--margin-02);
+  background-color: var(--bg-02);
+  border: 2px solid var(--fg);
+}
+
+.task-empty p {
+  margin-bottom: 0;
+}
+
+ul li {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: space-between;
+  border: 2px solid var(--fg);
+  border-bottom: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+ul li:last-child {
+  border-bottom: 2px solid var(--fg);
+}
+
+ul li .task-text {
+  padding: var(--margin-01);
+  flex-grow: 1;
+}
+
+ul li .task-text:hover {
+  background-color: var(--hl);
+}
+
+ul li.-done .task-text {
+  text-decoration: line-through;
+}
+
+ul li button {
+  border: none;
+  border-left: 2px solid black;
+}
+
+ul li button:hover {
+  background-color: var(--danger);
+}
+
+ul li .task-date {
+  padding: var(--margin-01);
+  display: block;
+  overflow: hidden;
+  border-right: 2px solid var(--fg);
+}
+
+.task-controls {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: var(--margin-02);
+}
+
+.task-controls input {
+  flex-grow: 1;
+  border-right: none;
+}
+
+.task-controls button:last-child {
+  border-left: none;
+}
+
+.task-controls button.-active {
+  background-color: var(--hl);
+}

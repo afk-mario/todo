@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS03</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="wrapper">
+        <h1>JS03 TODO</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <form action="" id="add-task">
+          <input
+            type="text"
+            name="task"
+            id=""
+            placeholder="tengo por hacer ..."
+            required
+          />
+          <button type="submit">+</button>
+        </form>
+
+        <div class="task-controls">
+          <input
+            type="text"
+            name="filter"
+            id="filter-task"
+            placeholder="🔎 filtrar"
+          />
+          <button id="sort-asc" class="-active">↑</button>
+          <button id="sort-dsc">↓</button>
+        </div>
+
+        <section id="task-list">
+          <div class="task-empty">
+            <h2>¡Felicidades! 🥳</h2>
+            <p>No tienes ninguna tarea</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="wrapper">
+        <span>
+          Made with 🖤 by
+          <a href="https://twitter.com/afk_mario">@afk_mario</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
